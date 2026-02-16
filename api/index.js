@@ -25,7 +25,7 @@ app.post('/api/qwen', async (req, res) => {
           content: req.body.prompt || ''  // 前端传来的 prompt
         }
       ],
-      max_tokens: 200,
+      max_tokens: 2000,
       temperature: 0.3,
       response_format: { type: 'json_object' }
     };
@@ -54,4 +54,5 @@ app.get('/', (req, res) => {
 });
 
 // 导出 Express 应用（Vercel 需要）
+
 module.exports = app;
